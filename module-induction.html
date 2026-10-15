@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precision Induction — Avasar Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Avasar Health</a>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+    <a href="mailto:pragnyakorti@gmail.com" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <a href="index.html" class="back-link" style="margin-top:28px; display:inline-flex;">← Back to Avasar Health</a>
+
+  <section class="module-hero">
+    <div class="module-icon-wrap icon-blue">💧</div>
+    <h1>Precision induction</h1>
+    <p class="hero-sub">A patient-specific safe dose ceiling before anesthesia begins — replacing weight-based guesswork with a number built for that patient.</p>
+  </section>
+
+  <section class="module-body-section">
+    <h2>The problem</h2>
+    <p>Induction dosing today is based almost entirely on body weight. It doesn't account for a patient's actual physiology — their baseline blood pressure, heart rate trends, or individual risk profile. For medium- and high-risk patients, crossing an unseen safety threshold can trigger hypotension or require a rescue intervention nearly half the time.</p>
+  </section>
+
+  <section class="module-body-section">
+    <h2>How it works</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-text"><h4>Pulls in existing patient data</h4><p>Reads from the EHR and pre-op monitor history already being collected — no new hardware or workflow change required.</p></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-text"><h4>Builds a causal risk model</h4><p>Uses causal inference methods, not simple correlation, to isolate what actually drives a safe dosing ceiling for that individual patient.</p></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-text"><h4>Surfaces a dose ceiling before induction</h4><p>Delivers a single, clear number to the anesthesiologist before anesthesia begins — a ceiling, not a replacement for clinical judgment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="module-body-section">
+    <h2>Who it's for</h2>
+    <p>Built specifically for medium- and high-risk patients, where the cost of guessing is highest. Low-risk, healthy patients who easily tolerate standard induction are left alone — this isn't about adding friction everywhere, only where it matters.</p>
+  </section>
+
+  <div class="metrics-gate">
+    <div class="metrics-gate-text">
+      <h3>Want the validation data?</h3>
+      <p>AUROC, calibration, and dose-ceiling effect sizes are available on request — reach out and we'll send them over.</p>
+    </div>
+    <a href="mailto:pragnyakorti@gmail.com?subject=Requesting validation data — Precision Induction" class="btn-primary">Request the data</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Avasar Health</span>
+    <a href="mailto:pragnyakorti@gmail.com" class="footer-email">pragnyakorti@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+toggle.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  if (current === 'dark') { root.setAttribute('data-theme', 'light'); toggle.textContent = '◐'; }
+  else { root.setAttribute('data-theme', 'dark'); toggle.textContent = '◑'; }
+});
+</script>
+</body>
+</html>

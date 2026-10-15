@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predictive Alarming — Avasar Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Avasar Health</a>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+    <a href="mailto:pragnyakorti@gmail.com" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <a href="index.html" class="back-link" style="margin-top:28px; display:inline-flex;">← Back to Avasar Health</a>
+
+  <section class="module-hero">
+    <div class="module-icon-wrap icon-green">📈</div>
+    <h1>Predictive alarming</h1>
+    <p class="hero-sub">A warning before a blood pressure crash happens — not a monitor that only reacts once it already has.</p>
+  </section>
+
+  <section class="module-body-section">
+    <h2>The problem</h2>
+    <p>Intraoperative monitors are built to alarm at a threshold — they tell a clinician a patient has crashed, not that one is coming. By the time the alarm fires, the team is already reacting to a crisis instead of preventing one. Intraoperative hypotension is common, consequential, and almost always visible in the data minutes before it's visible on the monitor.</p>
+  </section>
+
+  <section class="module-body-section">
+    <h2>How it works</h2>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-text"><h4>Streams live monitor data</h4><p>Reads continuously from existing intraoperative monitors — blood pressure, heart rate, and related vitals already being captured in the OR.</p></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-text"><h4>Forecasts forward in time</h4><p>A sequence model trained on real surgical cases projects where a patient's blood pressure is heading, not just where it's been.</p></div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-text"><h4>Surfaces a warning window</h4><p>Flags a likely hypotensive event with meaningful lead time, giving the care team room to intervene before a crash rather than after.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="module-body-section">
+    <h2>Who it's for</h2>
+    <p>Built for every intraoperative phase of surgery where blood pressure instability carries risk — particularly longer procedures and higher-risk patients, where a few extra minutes of warning changes what the care team can do about it.</p>
+  </section>
+
+  <div class="metrics-gate">
+    <div class="metrics-gate-text">
+      <h3>Want the validation data?</h3>
+      <p>AUROC, lead time, and calibration metrics are available on request — reach out and we'll send them over.</p>
+    </div>
+    <a href="mailto:pragnyakorti@gmail.com?subject=Requesting validation data — Predictive Alarming" class="btn-primary">Request the data</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Avasar Health</span>
+    <a href="mailto:pragnyakorti@gmail.com" class="footer-email">pragnyakorti@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+toggle.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  if (current === 'dark') { root.setAttribute('data-theme', 'light'); toggle.textContent = '◐'; }
+  else { root.setAttribute('data-theme', 'dark'); toggle.textContent = '◑'; }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avasar Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Avasar Health</a>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+    <a href="mailto:pragnyakorti@gmail.com" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <section class="hero">
+    <div class="collab-note"><span class="collab-dot"></span>In collaboration with UCSD Health</div>
+    <h1>The three moments that decide how surgery goes.</h1>
+    <p class="hero-sub">Avasar Health catches them before they become problems — a personalized dose before anesthesia, a warning before a crash, a clear answer at the moment a patient leaves the OR.</p>
+    <div class="cta-row">
+      <a href="mailto:pragnyakorti@gmail.com" class="btn-primary">Request a demo</a>
+      <a href="#modules" class="btn-ghost">See what it does</a>
+    </div>
+  </section>
+
+  <section class="outcome-section">
+    <div class="section-heading">Today vs. with Avasar</div>
+    <div class="outcome-grid">
+      <div class="outcome-card outcome-before">
+        <div class="outcome-tag">Today</div>
+        <p>Dosing is based on weight alone. Monitors alarm only after a crash has already begun. Discharge is judged with a decades-old checklist, leading to both premature discharges and PACU bottlenecks.</p>
+      </div>
+      <div class="outcome-card outcome-after">
+        <div class="outcome-tag">With Avasar</div>
+        <p>A personalized dose ceiling before anesthesia begins. A warning window before a crash, not after. A clear, data-driven read on recovery time the moment a patient leaves the OR.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="modules-section" id="modules">
+    <div class="section-heading">What Avasar Health does</div>
+    <div class="module-link-grid">
+      <a href="module-induction.html" class="module-link-card">
+        <div class="module-icon-wrap icon-blue">💧</div>
+        <h3>Precision induction</h3>
+        <p>A patient-specific safe dose ceiling before anesthesia begins — not a weight-based lookup.</p>
+        <span class="module-link-arrow">Learn how it works →</span>
+      </a>
+      <a href="module-alarming.html" class="module-link-card">
+        <div class="module-icon-wrap icon-green">📈</div>
+        <h3>Predictive alarming</h3>
+        <p>A warning before a blood pressure crash happens, not a monitor that reacts once it already has.</p>
+        <span class="module-link-arrow">Learn how it works →</span>
+      </a>
+      <a href="module-discharge.html" class="module-link-card">
+        <div class="module-icon-wrap icon-blue">⏱</div>
+        <h3>Smart discharge</h3>
+        <p>A clear read on PACU recovery time at the moment of OR exit, easing bottlenecks and premature discharge.</p>
+        <span class="module-link-arrow">Learn how it works →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <div class="section-heading">See it in action</div>
+    <div class="demo-panel">
+      <div class="demo-disclaimer">Illustrative demo using synthetic data — not a real patient case.</div>
+      <div class="demo-grid">
+        <div class="demo-chart-wrap"><canvas id="demoChart"></canvas></div>
+        <div class="demo-stats">
+          <div class="demo-clock" id="demoClock">00:00</div>
+          <div class="demo-stat-row"><span>Current cuff BP</span><b id="demoCur">— / —</b></div>
+          <div class="demo-stat-row"><span>Forecast (next reading)</span><b class="pred" id="demoPred">— / —</b></div>
+          <div class="demo-stat-row"><span>Actual (once arrived)</span><b class="act" id="demoAct">— / —</b></div>
+          <div class="alarm-label">Alarm probability — next 10 min</div>
+          <div class="alarm-row"><span class="alarm-name">Hypotension &lt;80</span><div class="alarm-bar-bg"><div class="alarm-bar-fg" id="bar1" style="width:0%"></div></div><span class="alarm-pct" id="pct1">0%</span></div>
+          <div class="alarm-row"><span class="alarm-name">Hypotension &lt;70</span><div class="alarm-bar-bg"><div class="alarm-bar-fg" id="bar2" style="width:0%"></div></div><span class="alarm-pct" id="pct2">0%</span></div>
+          <div class="demo-controls">
+            <button class="demo-btn" id="demoToggle">Pause</button>
+            <button class="demo-btn" id="demoRestart">Restart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder-section">
+    <div class="section-heading">Meet the founder</div>
+    <div class="founder-card">
+      <img class="founder-photo" src="founder.png" alt="Pragnya Korti">
+      <div>
+        <div class="founder-name">Pragnya Korti</div>
+        <div class="founder-title">Founder, Avasar Health</div>
+        <p class="founder-bio">Mechanical engineering undergraduate at UC San Diego, specializing in controls and robotics. Undergraduate researcher at the UCSD Contextual Robotics Institute. Solo-built the Avasar Health platform end-to-end, in collaboration with Dr. Gabriel at UCSD Health.</p>
+        <div class="founder-tags">
+          <span class="founder-tag">UCSD · Controls &amp; robotics</span>
+          <span class="founder-tag">Contextual Robotics Institute</span>
+        </div>
+        <a href="https://www.linkedin.com/in/pragnya-korti" target="_blank" rel="noopener" class="founder-link">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-block">
+    <div class="cta-block-text">
+      <h3>Built with UCSD Health anesthesiology</h3>
+      <p>IRB approved. Independent validation cohorts per module. No cross-contamination of training data between modules.</p>
+    </div>
+    <a href="mailto:pragnyakorti@gmail.com" class="btn-primary">Get in touch</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Avasar Health</span>
+    <a href="mailto:pragnyakorti@gmail.com" class="footer-email">pragnyakorti@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+toggle.addEventListener('click', () => {
+  const current = root.getAttribute('data-theme');
+  if (current === 'dark') { root.setAttribute('data-theme', 'light'); toggle.textContent = '◐'; }
+  else { root.setAttribute('data-theme', 'dark'); toggle.textContent = '◑'; }
+});
+
+const revealEls = document.querySelectorAll('.outcome-section, .modules-section, .demo-section, .founder-section, .cta-block');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+}, { threshold: 0.2 });
+revealEls.forEach(el => observer.observe(el));
+
+(function () {
+  const demoCanvas = document.getElementById('demoChart');
+  const dctx = demoCanvas.getContext('2d');
+  function resizeDemo() {
+    demoCanvas.width = demoCanvas.offsetWidth * devicePixelRatio;
+    demoCanvas.height = demoCanvas.offsetHeight * devicePixelRatio;
+    dctx.setTransform(1,0,0,1,0,0);
+    dctx.scale(devicePixelRatio, devicePixelRatio);
+  }
+  resizeDemo();
+  window.addEventListener('resize', resizeDemo);
+
+  const totalMin = 90, cuffInterval = 5;
+  function syntheticSys(min) { const dip = Math.exp(-Math.pow((min - 60) / 12, 2)) * 42; return Math.max(62, 122 - dip + Math.sin(min * 0.7) * 2.5); }
+  function syntheticDia(min) { const dip = Math.exp(-Math.pow((min - 60) / 12, 2)) * 22; return Math.max(40, 76 - dip + Math.cos(min * 0.6) * 1.8); }
+  const cuffTimes = []; for (let m = 0; m <= totalMin; m += cuffInterval) cuffTimes.push(m);
+  let playhead = 0, paused = false;
+  const actualSeries = [], forecastSeries = [];
+
+  function forecastFor(targetMin) {
+    const bias = (Math.random() - 0.5) * 6;
+    return { sys: syntheticSys(targetMin) + bias, dia: syntheticDia(targetMin) + bias * 0.5 };
+  }
+  function alarmProb(targetMin) {
+    const s = syntheticSys(targetMin);
+    return { p80: Math.max(0, Math.min(1, (84 - s) / 20)), p70: Math.max(0, Math.min(1, (74 - s) / 16)) };
+  }
+  function draw() {
+    const w = demoCanvas.offsetWidth, h = demoCanvas.offsetHeight;
+    dctx.clearRect(0, 0, w, h);
+    const padL = 34, padR = 10, padT = 10, padB = 20;
+    const plotW = w - padL - padR, plotH = h - padT - padB, minY = 50, maxY = 135;
+    function xFor(min) { return padL + (min / totalMin) * plotW; }
+    function yFor(val) { return padT + plotH - ((val - minY) / (maxY - minY)) * plotH; }
+    dctx.strokeStyle = 'rgba(255,255,255,0.06)'; dctx.lineWidth = 1;
+    [60, 80, 100, 120].forEach(v => {
+      dctx.beginPath(); dctx.moveTo(padL, yFor(v)); dctx.lineTo(w - padR, yFor(v)); dctx.stroke();
+      dctx.fillStyle = 'rgba(160,190,230,0.4)'; dctx.font = '10px DM Sans, sans-serif'; dctx.fillText(v, 2, yFor(v) + 3);
+    });
+    function drawLine(series, key, color) {
+      const pts = series.filter(p => p.min <= playhead);
+      if (pts.length < 2) return;
+      dctx.beginPath(); dctx.strokeStyle = color; dctx.lineWidth = 2;
+      pts.forEach((p, i) => { const x = xFor(p.min), y = yFor(p[key]); if (i === 0) dctx.moveTo(x, y); else dctx.lineTo(x, y); });
+      dctx.stroke();
+    }
+    drawLine(actualSeries, 'sys', '#3DC98A'); drawLine(actualSeries, 'dia', '#22d3ee');
+    forecastSeries.forEach(p => { if (p.min > playhead + 15) return; dctx.beginPath(); dctx.fillStyle = '#5AB4F0'; dctx.arc(xFor(p.min), yFor(p.sys), 3, 0, Math.PI * 2); dctx.fill(); });
+    dctx.strokeStyle = 'rgba(245,201,122,0.5)'; dctx.beginPath(); dctx.moveTo(xFor(playhead), padT); dctx.lineTo(xFor(playhead), padT + plotH); dctx.stroke();
+  }
+  function fmtClock(min) { const h = Math.floor(min / 60), m = Math.floor(min % 60); return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`; }
+  function tick() {
+    if (!paused) {
+      playhead += 1;
+      if (playhead > totalMin) { playhead = 0; actualSeries.length = 0; forecastSeries.length = 0; }
+      document.getElementById('demoClock').textContent = fmtClock(playhead);
+      const nearestCuff = cuffTimes.find(c => Math.abs(c - playhead) < 0.5);
+      if (nearestCuff !== undefined) {
+        const sys = syntheticSys(nearestCuff), dia = syntheticDia(nearestCuff);
+        actualSeries.push({ min: nearestCuff, sys, dia });
+        document.getElementById('demoCur').textContent = `${sys.toFixed(0)} / ${dia.toFixed(0)}`;
+        const targetMin = nearestCuff + cuffInterval;
+        if (targetMin <= totalMin) {
+          const fc = forecastFor(targetMin);
+          forecastSeries.push({ min: targetMin, sys: fc.sys, dia: fc.dia });
+          document.getElementById('demoPred').textContent = `${fc.sys.toFixed(0)} / ${fc.dia.toFixed(0)}`;
+          const alarms = alarmProb(targetMin);
+          document.getElementById('bar1').style.width = `${(alarms.p80 * 100).toFixed(0)}%`;
+          document.getElementById('pct1').textContent = `${(alarms.p80 * 100).toFixed(0)}%`;
+          document.getElementById('bar2').style.width = `${(alarms.p70 * 100).toFixed(0)}%`;
+          document.getElementById('pct2').textContent = `${(alarms.p70 * 100).toFixed(0)}%`;
+        }
+        const resolved = forecastSeries.find(f => Math.abs(f.min - nearestCuff) < 0.1);
+        if (resolved) document.getElementById('demoAct').textContent = `${sys.toFixed(0)} / ${dia.toFixed(0)}`;
+      }
+      draw();
+    }
+    setTimeout(tick, 110);
+  }
+  document.getElementById('demoToggle').addEventListener('click', (e) => { paused = !paused; e.target.textContent = paused ? 'Resume' : 'Pause'; });
+  document.getElementById('demoRestart').addEventListener('click', () => {
+    playhead = 0; actualSeries.length = 0; forecastSeries.length = 0;
+    document.getElementById('demoCur').textContent = '— / —';
+    document.getElementById('demoPred').textContent = '— / —';
+    document.getElementById('demoAct').textContent = '— / —';
+  });
+  draw(); tick();
+})();
+</script>
+</body>
+</html>
